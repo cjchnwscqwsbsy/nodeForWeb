@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height:100%;
+    font-size: 12px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("../img/bg(1200px).jpg") no-repeat center 0;
+    background-size: 100% 100%;
+}
+/*
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(1200px).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(1024).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(992).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 880px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(880).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 880px) and (min-width: 768px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(768).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url("../img/bg(768).jpg") no-repeat center 0;
+        background-size: cover;
+    }
+}
+*/
+
+.container .container-box{
+    position: absolute;
+    width: 730px;
+    height: 444px;
+    top: calc(50% - 222px);
+    left: calc(50% - 365px);
+    box-shadow: 0 0 10px #707070;
+    z-index: 12;
+}
+
+.container .container-box .box-left{
+    width: 60%;
+    height: 100%;
+    float: left;
+    background: rebeccapurple;
+    opacity: 0.3;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container .container-box .box-left div:nth-child(1){
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.container .container-box .box-left div:nth-child(2){
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+.container .container-box .box-right{
+    width: 40%;
+    height: 100%;
+    float: left;
+    background: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container .container-box{
+        position: absolute;
+        width: 292px;
+        height: 444px;
+        top: calc(50% - 222px);
+        left: calc(50% - 146px);
+        box-shadow: 0 0 10px #707070;
+        z-index: 12;
+    }
+    .container .container-box .box-left{
+        display: none;
+    }
+    .container .container-box .box-right{
+        width: 100%;
+        height: 100%;
+        float: left;
+        background: #fff;
+    }
+}
+
+.container .container-box .box-right .right-top{
+    width: 100%;
+    height: 45%;
+    background: 50% 50% url("../img/logo.png") no-repeat;
+}
+
+.container .container-box .box-right .right-bottom{
+    /*background: cornsilk;*/
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container .container-box .box-right .right-bottom input{
+    width: 70%;
+    height: 36px;
+    padding-left: 35px;
+    font-size: 1.2em;
+    border: 1px #ccc solid;
+}
+
+.container .container-box .box-right .right-bottom .accountbox{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.container .container-box .box-right .right-bottom .accountbox .accountIcon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 33px;
+    background: url("../img/account.png") no-repeat;
+}
+
+.container .container-box .box-right .right-bottom .passwordbox{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.container .container-box .box-right .right-bottom .passwordbox .passwordIcon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 33px;
+    background: url("../img/password.png") no-repeat;
+}
+
+.container .container-box .box-right .right-bottom .switchbox{
+    width: 100%;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup{
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn{
+    display: none;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .state{
+    box-shadow: #ccc 0 0 0 1px;
+    width: 36px;
+    height: 17px;
+    display: inline-block;
+    border-radius: 20px;
+    position: relative;
+    background-color: #bdbdbd;
+    overflow: hidden;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .state:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn:checked + label.state:before {
+    left: 20px;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup .switchBtn:checked + label.state {
+    background-color: #51ccee;
+    transition-delay: 0.3s;
+}
+
+.container .container-box .box-right .right-bottom .switchbox .switchgroup span{
+    font-size: 1em;
+    vertical-align: text-top;
+}
+
+.container .container-box .box-right .right-bottom .loginBtn{
+    width: 17%;
+    height: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #1E90FF 50% 50% url(../img/arrow.png) no-repeat;
+    cursor: pointer;
+    border-radius: 25px;
+    background-size: 46% 47%;
+}
