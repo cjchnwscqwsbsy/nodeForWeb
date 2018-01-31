@@ -24,8 +24,14 @@ http.createServer((req,res) => {
     if (pathName != './favicon.ico') {
         fs.readFile('../static' + pathName, (err, data) => {
             if (err) {
-                res.writeHeader(404, 'no found');
-                res.end();
+                fs.readFile('../static/404.html', (error, errData) => {
+                    if (error) {
+                        res.end();
+                    }
+                    res.writeHeader(404, {"Content-Type":"text/html;charset='utf-8'"});
+                    res.write(errData);
+                    res.end();
+                });
             } else {
                 res.writeHeader(200, 'success', resHeader);
                 res.write(data);

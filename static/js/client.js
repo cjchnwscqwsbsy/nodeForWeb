@@ -1,6 +1,5 @@
 $(function () {
-    submitBtn = $('#submit');
-    submitBtn.click(function () {
+    $('#submit').click(function () {
         const inputSelector = $(':input');
         const account = inputSelector[0].value;
         const password = inputSelector[1].value;
